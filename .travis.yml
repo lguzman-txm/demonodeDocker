@@ -1,0 +1,8 @@
+sudo: required
+services:
+  - docker
+
+script:
+  - docker build -t lguzman2022/node .
+  - docker images lguzman2022/node
+  
