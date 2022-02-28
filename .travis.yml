@@ -5,4 +5,13 @@ services:
 script:
   - docker build -t lguzman2022/node .
   - docker images lguzman2022/node
+
+before_deploy:
+  - docker login -u lguzman2022 -p d3m0#DockLG22
+
+deploy:
+  provider: script
+  script: docker push lguzman2022/node
+  on:
+    branch: master
   
